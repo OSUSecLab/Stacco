@@ -81,3 +81,7 @@ $PIN_ROOT/extras/dcfg/bin/intel64/dcfg-differ log_0.dcfg.json.bz2 log_0.trace.js
 5. Perform page level side-channel vulnerability analysis with `pgfault-purge.py` and `pgfault-vulnerability-detector.py`
 
 6. Perform cacheline level side-channel vulnerability analysis with `cache-vulnerability-detector.py`
+
+## Use valgrind (callgrind) to analyze on the function call granularity when Intel Pin could not be used on some libraries for compatibility issues.
+
+Code could found in the directory "valgrind". Generate a function call trace using callgrind and then follow the examples in the scripts `purge.sh` and `analyze.sh`. Make sure you replace the key function name in `xml_trace.py` (an example for GnuTLS is provided in `xml_trace.py`).
