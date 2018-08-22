@@ -1,5 +1,7 @@
 # stacco
 
+Before testing a TLS library with **stacco**, make sure that your server program has valid certificates. To test for Lucky13 and Bleichenbacher side channel vulenrabilities, make sure that your certificate could be used with the ciphersuite *TLS_RSA_WITH_AES_128_CBC_SHA*.
+
 ## Intel Pin plugin setup
 1. Download [Intel PinPlay toolkit (pinplay-drdebug-pldi2016-3.0-pin-3.0-76991-gcc-linux)](https://software.intel.com/protected-download/366522/366520) and put into directory "pin".
 
@@ -24,8 +26,10 @@ cd TLS-Attacker-master
 
 ## Use TLS Attacker to generate specific packets to send to the server program using tested library
 ### Import private key and certificate into java keystore
+```
 openssl pkcs12 -export -in my.crt -inkey my.key -chain -CAfile my-ca-file.crt -name "my-domain.com" -out my.p12
 keytool -importkeystore -deststorepass MY-KEYSTORE-PASS -destkeystore my-keystore.jks -srckeystore my.p12 -srcstoretype PKCS12
+```
 
 reference: https://makandracards.com/jan0sch/24553-import-private-key-and-certificate-into-java-keystore
 
