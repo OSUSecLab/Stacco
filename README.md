@@ -72,7 +72,7 @@ In order to do analysis on the server programs, use Intel Pin or Valgrind (next 
 cd test/openssl
 $PIN_ROOT/extras/pinplay/scripts/record --pintool $PIN_ROOT/extras/dcfg/bin/intel64/dcfg-driver.so --pintool_options='-dcfg -dcfg:write_trace -dcfg:write_debug -log:control start:address:foo,stop:addres:bar' -- ./server
 ```
-*Note*: -dcfg:write_debug could be removed
+**Note**: -dcfg:write_debug could be removed
 
 3. Analyze dcfg & trace:
 ```
@@ -83,7 +83,7 @@ $PIN_ROOT/extras/dcfg/bin/intel64/dcfg-differ log_0.dcfg.json.bz2 log_0.trace.js
 4. Diff two traces:
 `diff /some/bbtrace.txt /another/bbtrace.txt > diff.txt`
 
-*Note*: a sample bash script could be found in `"pin/diff.sh"`
+**Note**: a sample bash script could be found in `"pin/diff.sh"`
 
 5. Perform page level side-channel vulnerability analysis with `pgfault-vulnerability-detector.py` and `pgfault-purge.py`:
 ```
@@ -98,7 +98,7 @@ cd pin
 python cache-vulnerability-detector.py diff.txt /some/bbtrace.txt /another/bbtrace.txt > cvul.txt
 ```
 
-*Note*: a sample bash script for the complete process of steps 3~6 could be found in `"pin/dcfg2vul.sh"`. As explained in the paper, GnuTLS has some compatibility issues with Intel Pin. So it could only be tested with Valgrind (see next section).
+**Note**: a sample bash script for the complete process of steps 3~6 could be found in `"pin/dcfg2vul.sh"`. As explained in the paper, GnuTLS has some compatibility issues with Intel Pin. So it could only be tested with Valgrind (see next section).
 
 ## Use valgrind (callgrind) to analyze on the function call granularity when Intel Pin could not be used on some libraries for compatibility issues.
 
