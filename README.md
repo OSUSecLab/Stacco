@@ -14,7 +14,7 @@ make
 ```
 
 ## TLS Attacker setup
-1. Download [TLS Attacker (TLS-Attacker-master)](https://github.com/RUB-NDS/TLS-Attacker) and put into directory *"TLS-Attacker"*. Notice that you need to have Java installed.
+1. Download [TLS Attacker (TLS-Attacker-master)](https://github.com/RUB-NDS/TLS-Attacker/tree/c2b1e5738254aa34eec59edcd59ae93a32f00058) and put into directory *"TLS-Attacker"*. Stacco uses TLS-Attacker 1.2 but the official release is buggy so the link points to a later commit instead. Notice that you need to have Java installed.
 
 2. Execute command line instructions
 ```
@@ -26,7 +26,28 @@ cd TLS-Attacker-master
 
 ## Use TLS Attacker to generate specific packets to send to the server program using tested library
 ### Import private key and certificate into java keystore
-Sample commands for generating java keystores to be used by TLS Attacker are below. Make sure you change all filenames in the commands correctly.
+You should first have your server and client certificates ready. They will later be used by your tested server program and TLS-Attacker, respectively. An example on generating self-signed certificates using openssl could be found below ([ref](https://cloudfundoo.wordpress.com/2012/07/09/ssltls-sockets-programming-using-openssl-and-polarssl/)).
+```
+##generate CA cert and key files
+$openssl genrsa -des3 -out ca.key 4096
+$openssl req -new -x509 -days 365 -key ca.key -out ca.crt
+ 
+##generate Server cert and key files
+$openssl genrsa -des3 -out ssl_server.key 4096
+$openssl req -new -key ssl_server.key -out ssl_server.csr
+ 
+##Sign using CA
+$openssl x509 -req -days 365 -in ssl_server.csr -CA ca.crt -CAkey ca.key -set_serial 01 -out ssl_server.crt
+ 
+##generate Client cert and key files
+$openssl genrsa -des3 -out ssl_client.key 4096
+$openssl req -new -key ssl_client.key -out ssl_client.csr
+ 
+##Sign using CA
+$openssl x509 -req -days 365 -in ssl_client.csr -CA ca.crt -CAkey ca.key -set_serial 01 -out ssl_client.crt
+```
+
+To use these along with TLS-Attacker, you need to port the client key and cert into a java keystore. Sample commands for generating java keystores to be used by TLS Attacker are below. Make sure you change all filenames in the commands accordingly.
 ```
 openssl pkcs12 -export -in my.crt -inkey my.key -chain -CAfile my-ca-file.crt -name "my-domain.com" -out my.p12
 keytool -importkeystore -deststorepass MY-KEYSTORE-PASS -destkeystore my-keystore.jks -srckeystore my.p12 -srcstoretype PKCS12
@@ -58,7 +79,7 @@ java -jar TLS-Attacker-1.2.jar bleichenbacher -type INCORRECT -errortype 9 -conn
 *For gnutls, remove `"-client_authentication"`
 
 ```
-java -Djava.library.path="../../Utils/src/main/java/" -jar TLS-Attacker-1.2.jar bleichenbacher -type CORRECT -connect 164.107.119.231:8888 -keystore ~/cacert/ssl_client.jks -password xiaoyuan -alias 1 -client_authentication -tls_timeout 20000
+java -Djava.library.path="../../Utils/src/main/java/" -jar TLS-Attacker-1.2.jar bleichenbacher -type CORRECT -connect 192.168.0.10:8888 -keystore ~/cacert/ssl_client.jks -password xiaoyuan -alias 1 -client_authentication -tls_timeout 20000
 ```
 
 ## Use pintool DCFG to capture and analyze execution trace

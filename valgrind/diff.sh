@@ -1,0 +1,11 @@
+python ../../xml_diff.py correct.xml incorrect0.xml diff0.html
+python ../../xml_diff.py correct.xml incorrect1.xml diff1.html
+python ../../xml_diff.py correct.xml incorrect2.xml diff2.html
+python ../../xml_diff.py correct.xml incorrect3.xml diff3.html
+python ../../xml_diff.py correct.xml incorrect4.xml diff4.html
+python ../../xml_diff.py correct.xml incorrect5.xml diff5.html
+python ../../xml_diff.py correct.xml incorrect6.xml diff6.html
+python ../../xml_diff.py correct.xml incorrect7.xml diff7.html
+python ../../xml_diff.py correct.xml incorrect8.xml diff8.html
+python ../../xml_diff.py correct.xml incorrect9.xml diff9.html
+python ../../xml_diff.py correct.xml incorrect10.xml diff10.html

@@ -1,0 +1,17 @@
+diff bleichenbacher_correct/bbtrace.txt bleichenbacher_incorrect0/bbtrace.txt > diff_b0.txt
+diff bleichenbacher_correct/bbtrace.txt bleichenbacher_incorrect1/bbtrace.txt > diff_b1.txt
+diff bleichenbacher_correct/bbtrace.txt bleichenbacher_incorrect2/bbtrace.txt > diff_b2.txt
+diff bleichenbacher_correct/bbtrace.txt bleichenbacher_incorrect3/bbtrace.txt > diff_b3.txt
+diff bleichenbacher_correct/bbtrace.txt bleichenbacher_incorrect4/bbtrace.txt > diff_b4.txt
+diff bleichenbacher_correct/bbtrace.txt bleichenbacher_incorrect5/bbtrace.txt > diff_b5.txt
+diff bleichenbacher_correct/bbtrace.txt bleichenbacher_incorrect6/bbtrace.txt > diff_b6.txt
+diff bleichenbacher_correct/bbtrace.txt bleichenbacher_incorrect7/bbtrace.txt > diff_b7.txt
+diff bleichenbacher_correct/bbtrace.txt bleichenbacher_incorrect8/bbtrace.txt > diff_b8.txt
+diff bleichenbacher_correct/bbtrace.txt bleichenbacher_incorrect9/bbtrace.txt > diff_b9.txt
+diff bleichenbacher_correct/bbtrace.txt bleichenbacher_incorrect10/bbtrace.txt > diff_b10.txt
+diff cbc1/bbtrace.txt cbc2/bbtrace.txt > diff_cbc2.txt
+diff cbc1/bbtrace.txt cbc3_00/bbtrace.txt > diff_cbc3_00.txt
+diff cbc1/bbtrace.txt cbc3_FF/bbtrace.txt > diff_cbc3_FF.txt
+diff cbc1/bbtrace.txt cbc4/bbtrace.txt > diff_cbc4.txt
+diff cbc1/bbtrace.txt cbc5_00/bbtrace.txt > diff_cbc5_00.txt
+diff cbc1/bbtrace.txt cbc5_FF/bbtrace.txt > diff_cbc5_FF.txt

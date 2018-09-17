@@ -1,0 +1,23 @@
+mv TLS-Attacker-master/Attacks/src/main/java/de/rub/nds/tlsattacker/attacks/config/BleichenbacherCommandConfig.java TLS-Attacker-master/Attacks/src/main/java/de/rub/nds/tlsattacker/attacks/config/BleichenbacherCommandConfig.java.backup
+cp BleichenbacherCommandConfig.java TLS-Attacker-master/Attacks/src/main/java/de/rub/nds/tlsattacker/attacks/config
+cp BleichenbacherPlaintextRecoveryCommandConfig.java TLS-Attacker-master/Attacks/src/main/java/de/rub/nds/tlsattacker/attacks/config
+cp PacketGenerationCommandConfig.java TLS-Attacker-master/Attacks/src/main/java/de/rub/nds/tlsattacker/attacks/config
+mv TLS-Attacker-master/Attacks/src/main/java/de/rub/nds/tlsattacker/attacks/impl/BleichenbacherAttack.java TLS-Attacker-master/Attacks/src/main/java/de/rub/nds/tlsattacker/attacks/impl/BleichenbacherAttack.java.backup
+cp BleichenbacherAttack.java TLS-Attacker-master/Attacks/src/main/java/de/rub/nds/tlsattacker/attacks/impl
+cp PacketGenerationAttack.java TLS-Attacker-master/Attacks/src/main/java/de/rub/nds/tlsattacker/attacks/impl
+mv TLS-Attacker-master/Attacks/src/main/java/de/rub/nds/tlsattacker/attacks/pkcs1/PKCS1VectorGenerator.java TLS-Attacker-master/Attacks/src/main/java/de/rub/nds/tlsattacker/attacks/pkcs1/PKCS1VectorGenerator.java.backup
+cp PKCS1VectorGenerator.java TLS-Attacker-master/Attacks/src/main/java/de/rub/nds/tlsattacker/attacks/pkcs1
+mv TLS-Attacker-master/Attacks/src/main/java/de/rub/nds/tlsattacker/attacks/impl/Lucky13Attack.java TLS-Attacker-master/Attacks/src/main/java/de/rub/nds/tlsattacker/attacks/impl/Lucky13Attack.java.backup
+cp Lucky13Attack.java TLS-Attacker-master/Attacks/src/main/java/de/rub/nds/tlsattacker/attacks/impl
+mv TLS-Attacker-master/Runnable/src/main/java/de/rub/nds/tlsattacker/Main.java TLS-Attacker-master/Runnable/src/main/java/de/rub/nds/tlsattacker/Main.java.backup
+cp Main.java TLS-Attacker-master/Runnable/src/main/java/de/rub/nds/tlsattacker
+mv TLS-Attacker-master/TLS/src/main/java/de/rub/nds/tlsattacker/dtls/record/DtlsRecordHandler.java TLS-Attacker-master/TLS/src/main/java/de/rub/nds/tlsattacker/dtls/record/DtlsRecordHandler.java.backup
+cp DtlsRecordHandler.java TLS-Attacker-master/TLS/src/main/java/de/rub/nds/tlsattacker/dtls/record
+mv TLS-Attacker-master/TLS/src/main/java/de/rub/nds/tlsattacker/tls/crypto/TlsRecordBlockCipher.java TLS-Attacker-master/TLS/src/main/java/de/rub/nds/tlsattacker/tls/crypto/TlsRecordBlockCipher.java.backup
+cp TlsRecordBlockCipher.java TLS-Attacker-master/TLS/src/main/java/de/rub/nds/tlsattacker/tls/crypto
+mv TLS-Attacker-master/TLS/src/main/java/de/rub/nds/tlsattacker/tls/protocol/handshake/RSAClientKeyExchangeHandler.java TLS-Attacker-master/TLS/src/main/java/de/rub/nds/tlsattacker/tls/protocol/handshake/RSAClientKeyExchangeHandler.java.backup
+cp RSAClientKeyExchangeHandler.java TLS-Attacker-master/TLS/src/main/java/de/rub/nds/tlsattacker/tls/protocol/handshake
+mv TLS-Attacker-master/TLS/src/main/java/de/rub/nds/tlsattacker/tls/record/RecordHandler.java TLS-Attacker-master/TLS/src/main/java/de/rub/nds/tlsattacker/tls/record/RecordHandler.java.backup
+cp RecordHandler.java TLS-Attacker-master/TLS/src/main/java/de/rub/nds/tlsattacker/tls/record
+# an empty source code, not open-souce now
+cp BleichenbacherPlaintextRecovery.java TLS-Attacker-master/Attacks/src/main/java/de/rub/nds/tlsattacker/attacks/impl

@@ -1,0 +1,12 @@
+python ../purge_output.py -i callgrind.out.26945 -o incorrect0.out
+python ../purge_output.py -i callgrind.out.26952 -o incorrect1.out
+python ../purge_output.py -i callgrind.out.26961 -o incorrect2.out
+python ../purge_output.py -i callgrind.out.26971 -o incorrect3.out
+python ../purge_output.py -i callgrind.out.26985 -o incorrect4.out
+python ../purge_output.py -i callgrind.out.26991 -o incorrect5.out
+python ../purge_output.py -i callgrind.out.26996 -o incorrect6.out
+python ../purge_output.py -i callgrind.out.27003 -o incorrect7.out
+python ../purge_output.py -i callgrind.out.27009 -o incorrect8.out
+python ../purge_output.py -i callgrind.out.27016 -o incorrect10.out
+python ../purge_output.py -i callgrind.out.7479 -o correct.out
+python ../purge_output.py -i callgrind.out.7485 -o incorrect9.out
