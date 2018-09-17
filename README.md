@@ -1,6 +1,8 @@
-# stacco
+# Stacco
 
-Before testing a TLS library with **stacco**, make sure that your server program has valid certificates. To test for Lucky13 and Bleichenbacher side channel vulenrabilities, make sure that your certificate could be used with the ciphersuite *TLS_RSA_WITH_AES_128_CBC_SHA*.
+This project is based on the paper [Stacco: Differentially Analyzing Side-Channel Traces for Detecting SSL/TLS Vulnerabilities in Secure Enclaves](https://acmccs.github.io/papers/p859-xiaoA.pdf). *S*ide-channel *T*race *A*nalyzer for finding *C*hosen-*C*iphertext *O*racles (Stacco) is a software framework for conducting differential analysis on the SSL/TLS implementations to detect sensitive control-flow vulnerabilities that can be exploited to create decryption oracles for CBC padding oracle attacks and Bleichenbacher attacks. [Citation](https://scholar.googleusercontent.com/scholar.bib?q=info:m7ADNp2UfXUJ:scholar.google.com/&output=citation&scisig=AAGBfm0AAAAAW5_nmSgQRsyzB6UZd5FRIM0XqnVXlNEc&scisf=4&ct=citation&cd=-1&hl=en)
+
+Before testing a TLS library with **Stacco**, make sure that your server program has valid certificates. To test for Lucky13 and Bleichenbacher side channel vulenrabilities, make sure that your certificate could be used with the ciphersuite *TLS_RSA_WITH_AES_128_CBC_SHA*.
 
 ## Intel Pin plugin setup
 1. Download [Intel PinPlay toolkit (pinplay-drdebug-pldi2016-3.0-pin-3.0-76991-gcc-linux)](https://software.intel.com/protected-download/366522/366520) and put into directory *"pin"*.
@@ -124,3 +126,6 @@ python cache-vulnerability-detector.py diff.txt /some/bbtrace.txt /another/bbtra
 ## Use valgrind (callgrind) to analyze on the function call granularity when Intel Pin could not be used on some libraries for compatibility issues.
 
 Code could found in the directory *"valgrind"*. Generate a function call trace using callgrind and then follow the examples in the scripts `purge.sh` and `analyze.sh`. Make sure you replace the key function name in `xml_trace.py` (an example for GnuTLS is provided in `xml_trace_gnutls.py`).
+
+## Research Team
+The project is developed by OSU SecLab directed by [Prof. Yinqian Zhang](http://web.cse.ohio-state.edu/~zhang.834/). For any questions, please contact the author [Yuan Xiao](http://web.cse.ohio-state.edu/~xiao.465/).
