@@ -128,4 +128,11 @@ python cache-vulnerability-detector.py diff.txt /some/bbtrace.txt /another/bbtra
 Code could found in the directory *"valgrind"*. Generate a function call trace using callgrind and then follow the examples in the scripts `purge.sh` and `analyze.sh`. Make sure you replace the key function name in `xml_trace.py` (an example for GnuTLS is provided in `xml_trace_gnutls.py`).
 
 ## Research Team
-The project is developed by OSU SecLab directed by [Prof. Yinqian Zhang](http://web.cse.ohio-state.edu/~zhang.834/). For any questions, please contact the author [Yuan Xiao](http://web.cse.ohio-state.edu/~xiao.465/).
+The project is developed by [Yuan Xiao](http://web.cse.ohio-state.edu/~xiao.465/) from OSU SecLab. Meet our group members:
+[Prof. Yinqian Zhang](http://web.cse.ohio-state.edu/~zhang.834/)
+[Prof. Zhiqiang Lin](http://web.cse.ohio-state.edu/~lin.3021/)
+[Guoxing Chen](http://web.cse.ohio-state.edu/~chen.4329/)
+[Sanchuan Chen](http://web.cse.ohio-state.edu/~chen.4825/)
+Mengyuan Li
+[Yuan Xiao](http://web.cse.ohio-state.edu/~xiao.465/)
+[Xiaokuan Zhang](http://web.cse.ohio-state.edu/~zhaxiaok/)
