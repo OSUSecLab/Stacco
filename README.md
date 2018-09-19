@@ -129,10 +129,17 @@ Code could found in the directory *"valgrind"*. Generate a function call trace u
 
 ## Research Team
 The project is developed by [Yuan Xiao](http://web.cse.ohio-state.edu/~xiao.465/) from OSU SecLab. Meet our group members:
+
 [Prof. Yinqian Zhang](http://web.cse.ohio-state.edu/~zhang.834/)
+
 [Prof. Zhiqiang Lin](http://web.cse.ohio-state.edu/~lin.3021/)
+
 [Guoxing Chen](http://web.cse.ohio-state.edu/~chen.4329/)
+
 [Sanchuan Chen](http://web.cse.ohio-state.edu/~chen.4825/)
+
 Mengyuan Li
+
 [Yuan Xiao](http://web.cse.ohio-state.edu/~xiao.465/)
+
 [Xiaokuan Zhang](http://web.cse.ohio-state.edu/~zhaxiaok/)
