@@ -16,7 +16,7 @@ make
 ```
 
 ## TLS Attacker setup
-1. Download [TLS Attacker (TLS-Attacker-master)](https://github.com/RUB-NDS/TLS-Attacker/tree/c2b1e5738254aa34eec59edcd59ae93a32f00058) and put into directory *"TLS-Attacker"*. Stacco uses TLS-Attacker 1.2 but the official release is buggy so the link points to a later commit instead. Notice that you need to have Java installed.
+1. Download [TLS Attacker (TLS-Attacker-master)](https://github.com/RUB-NDS/TLS-Attacker/tree/c2b1e5738254aa34eec59edcd59ae93a32f00058) and put into directory *"TLS-Attacker"*. Stacco uses TLS-Attacker 1.2 but the official release is buggy so the link points to a later commit instead. Notice that you need to have Java installed. If it still fails when you use the above link, a zip of the working version could be found on the author's personal page (link to come soon).
 
 2. Execute command line instructions
 ```
